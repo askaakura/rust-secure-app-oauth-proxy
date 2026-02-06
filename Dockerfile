@@ -14,7 +14,7 @@ RUN cargo build --release && rm src/*.rs
 
 COPY src ./src/
 
-# yeah seems unnecessary but it does reduce the image size
+# yeah, seems unnecessary but it does reduce the image size
 RUN touch -a -m src/*.rs && cargo build --release
 
 FROM alpine:3.23
